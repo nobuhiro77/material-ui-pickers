@@ -171,21 +171,21 @@ export class TimePicker extends React.Component<TimePickerProps> {
         >
           <div className={hourMinuteClassName}>
             <ToolbarButton
-              variant="h2"
+              variant="display3"
               onClick={this.openHourView}
               selected={openView === ClockType.HOURS}
               label={utils.getHourText(date, Boolean(ampm))}
             />
 
             <ToolbarButton
-              variant="h2"
+              variant="display3"
               label=":"
               selected={false}
               className={classes.separator}
             />
 
             <ToolbarButton
-              variant="h2"
+              variant="display3"
               onClick={this.openMinutesView}
               selected={openView === ClockType.MINUTES}
               label={utils.getMinuteText(date)}
@@ -194,14 +194,14 @@ export class TimePicker extends React.Component<TimePickerProps> {
             {seconds && (
               <React.Fragment>
                 <ToolbarButton
-                  variant="h2"
+                  variant="display3"
                   label=":"
                   selected={false}
                   className={classes.separator}
                 />
 
                 <ToolbarButton
-                  variant="h2"
+                  variant="display3"
                   onClick={this.openSecondsView}
                   selected={openView === ClockType.SECONDS}
                   label={utils.getSecondText(date)}
@@ -221,7 +221,7 @@ export class TimePicker extends React.Component<TimePickerProps> {
               <ToolbarButton
                 className={classes.ampmLabel}
                 selected={meridiemMode === 'am'}
-                variant="subtitle1"
+                variant="subheading"
                 label={utils.getMeridiemText('am')}
                 onClick={this.setMeridiemMode('am')}
               />
@@ -229,7 +229,7 @@ export class TimePicker extends React.Component<TimePickerProps> {
               <ToolbarButton
                 className={classes.ampmLabel}
                 selected={meridiemMode === 'pm'}
-                variant="subtitle1"
+                variant="subheading"
                 label={utils.getMeridiemText('pm')}
                 onClick={this.setMeridiemMode('pm')}
               />

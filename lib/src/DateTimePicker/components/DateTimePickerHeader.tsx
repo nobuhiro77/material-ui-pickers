@@ -49,14 +49,14 @@ export const DateTimePickerHeader: React.SFC<
     <PickerToolbar className={classes.toolbar}>
       <div className={classes.dateHeader}>
         <ToolbarButton
-          variant="subtitle1"
+          variant="subheading"
           onClick={changeOpenView(DateTimePickerView.YEAR)}
           selected={openView === DateTimePickerView.YEAR}
           label={utils.getYearText(date)}
         />
 
         <ToolbarButton
-          variant="h4"
+          variant="display1"
           onClick={changeOpenView(DateTimePickerView.DATE)}
           selected={openView === DateTimePickerView.DATE}
           label={utils.getDateTimePickerHeaderText(date)}
@@ -66,21 +66,21 @@ export const DateTimePickerHeader: React.SFC<
       <div className={classes.timeHeader}>
         <div className={hourMinuteClassName}>
           <ToolbarButton
-            variant="h3"
+            variant="display2"
             onClick={changeOpenView(DateTimePickerView.HOUR)}
             selected={openView === DateTimePickerView.HOUR}
             label={utils.getHourText(date, ampm!)}
           />
 
           <ToolbarButton
-            variant="h3"
+            variant="display2"
             label=":"
             selected={false}
             className={classes.separator}
           />
 
           <ToolbarButton
-            variant="h3"
+            variant="display2"
             onClick={changeOpenView(DateTimePickerView.MINUTES)}
             selected={openView === DateTimePickerView.MINUTES}
             label={utils.getMinuteText(date)}
@@ -92,7 +92,7 @@ export const DateTimePickerHeader: React.SFC<
             <ToolbarButton
               className={classes.ampmLabel}
               selected={meridiemMode === 'am'}
-              variant="subtitle1"
+              variant="subheading"
               label={utils.getMeridiemText('am')}
               onClick={setMeridiemMode('am')}
             />
@@ -100,7 +100,7 @@ export const DateTimePickerHeader: React.SFC<
             <ToolbarButton
               className={classes.ampmLabel}
               selected={meridiemMode === 'pm'}
-              variant="subtitle1"
+              variant="subheading"
               label={utils.getMeridiemText('pm')}
               onClick={setMeridiemMode('pm')}
             />
